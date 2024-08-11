@@ -1,0 +1,33 @@
+<header>
+  <h1 style="text-align: center">Crown Pair Match</h1>
+</header>
+<div class="container">
+  <mat-grid-list cols="5" rowHeight="1:1" gutterSize="0">
+    @for (boardItem of boardList; track boardItem;){
+    <mat-grid-tile>
+      <img
+        class="icon"
+        [src]="boardItem.type.image"
+        alt="board image"
+        (click)="onCardClicked(boardItem)"
+      />
+    </mat-grid-tile>
+    }
+  </mat-grid-list>
+  <button class="button" mat-flat-button (click)="onResetBoard()">
+    Board Reset
+  </button>
+</div>
+
+<ng-template #dialogTemplate>
+  <div>
+    @for (boardItem of boardItems; track boardItem;){
+    <img
+      class="image"
+      [src]="boardItem.image"
+      alt="board image"
+      (click)="onCardSelected(boardItem)"
+    />
+    }
+  </div>
+</ng-template>
