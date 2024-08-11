@@ -80,4 +80,10 @@ export class AppComponent {
       item.type = { name: 'default', image: 'default.jpg' };
     });
   }
+  onSaveBoard() {
+    localStorage.setItem('boardList', JSON.stringify(this.boardList));
+  }
+  onLoadBoard() {
+    this.boardList = JSON.parse(localStorage.getItem('boardList') || '');
+  }
 }

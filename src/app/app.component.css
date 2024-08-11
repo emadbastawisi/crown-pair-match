@@ -13,7 +13,6 @@ mat-grid-tile {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 .dialog-container {
   padding: 3%;
@@ -26,8 +25,7 @@ mat-grid-tile {
   height: 90%;
 }
 .button {
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 10px;
 }
 .image {
   width: 75px;

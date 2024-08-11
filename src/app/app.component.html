@@ -1,4 +1,4 @@
-<h4 style="text-align: center">Crown Pair Match Helper</h4>
+<h5 style="text-align: center">Crown Pair Match Helper</h5>
 <div class="container">
   <mat-grid-list cols="5" rowHeight="1:1" gutterSize="0">
     @for (boardItem of boardList; track boardItem;){
@@ -14,7 +14,15 @@
   </mat-grid-list>
 </div>
 <div class="button-container" style="display: flex">
-  <button button mat-flat-button (click)="onResetBoard()">Reset Board</button>
+  <button button class="button" mat-flat-button (click)="onResetBoard()">
+    Reset Board
+  </button>
+  <button button class="button" mat-flat-button (click)="onSaveBoard()">
+    Save Board
+  </button>
+  <button button class="button" mat-flat-button (click)="onLoadBoard()">
+    Load Board
+  </button>
 </div>
 
 <ng-template #dialogTemplate>
