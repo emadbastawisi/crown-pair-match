@@ -1,6 +1,4 @@
-<header>
-  <h1 style="text-align: center">Crown Pair Match</h1>
-</header>
+<h4 style="text-align: center">Crown Pair Match Helper</h4>
 <div class="container">
   <mat-grid-list cols="5" rowHeight="1:1" gutterSize="0">
     @for (boardItem of boardList; track boardItem;){
@@ -14,13 +12,13 @@
     </mat-grid-tile>
     }
   </mat-grid-list>
-  <button class="button" mat-flat-button (click)="onResetBoard()">
-    Board Reset
-  </button>
+</div>
+<div class="button-container" style="display: flex">
+  <button button mat-flat-button (click)="onResetBoard()">Reset Board</button>
 </div>
 
 <ng-template #dialogTemplate>
-  <div>
+  <div class="dialog-container">
     @for (boardItem of boardItems; track boardItem;){
     <img
       class="image"
