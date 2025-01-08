@@ -1,34 +1,132 @@
+.header {
+  background-color: #007bff;
+  padding: 5px 10px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1; /* Added line-height to reduce height */
+}
+
 mat-grid-tile {
-  background: rgb(95, 69, 52);
+  background: none;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0; /* Ensure no extra padding around grid tiles */
 }
 
 .container {
   width: 60%;
-  max-width: 500px;
+  max-width: 75vh;
   margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
+
 .button-container {
   width: 60%;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 80vh;
+  margin: 10px auto 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 10px;
 }
+
 .dialog-container {
   padding: 3%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 0; /* Ensure no extra padding inside card */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .icon {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire grid tile */
+  border-radius: 8px;
+  display: block;
+  border: none; /* Remove black border */
 }
+
+/* General Button Styling */
 .button {
-  margin: 10px;
+  padding: 1.75vw; /* Smaller padding for smaller buttons */
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1vw; /* Smaller font size for smaller buttons */
+  color: #fff; /* Default text color */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+/* Reset Button - Red */
+.button.reset {
+  background-color: #dc3545; /* Red */
+}
+
+.button.reset:hover {
+  background-color: #a71d2a;
+}
+
+/* Save Button - Green */
+.button.save {
+  background-color: #28a745; /* Green */
+}
+
+.button.save:hover {
+  background-color: #1c7430;
+}
+
+/* Load Button - Blue */
+.button.load {
+  background-color: #007bff; /* Blue */
+}
+
+.button.load:hover {
+  background-color: #0056b3;
+}
+
+/* Hover Effect */
+.button:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
 .image {
   width: 75px;
   height: 75px;
   margin: 5px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none; /* Remove black border */
+}
+
+.image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

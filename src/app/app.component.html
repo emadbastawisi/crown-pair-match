@@ -1,26 +1,25 @@
-<h5 style="text-align: center">Crown Pair Match Helper</h5>
+<header class="header">
+  <h1 class="title">Fruit Pair Match Helper</h1>
+</header>
 <div class="container">
-  <mat-grid-list cols="5" rowHeight="1:1" gutterSize="0">
+  <mat-grid-list cols="5" rowHeight="1:1" gutterSize="16px">
     @for (boardItem of boardList; track boardItem;){
     <mat-grid-tile>
-      <img
-        class="icon"
-        [src]="boardItem.type.image"
-        alt="board image"
-        (click)="onCardClicked(boardItem)"
-      />
+      <div class="card" (click)="onCardClicked(boardItem)">
+        <img class="icon" [src]="boardItem.type.image" alt="board image" />
+      </div>
     </mat-grid-tile>
     }
   </mat-grid-list>
 </div>
-<div class="button-container" style="display: flex">
-  <button button class="button" mat-flat-button (click)="onResetBoard()">
+<div class="button-container">
+  <button class="button reset" mat-flat-button (click)="onResetBoard()">
     Reset Board
   </button>
-  <button button class="button" mat-flat-button (click)="onSaveBoard()">
+  <button class="button save" mat-flat-button (click)="onSaveBoard()">
     Save Board
   </button>
-  <button button class="button" mat-flat-button (click)="onLoadBoard()">
+  <button class="button load" mat-flat-button (click)="onLoadBoard()">
     Load Board
   </button>
 </div>
@@ -28,12 +27,9 @@
 <ng-template #dialogTemplate>
   <div class="dialog-container">
     @for (boardItem of boardItems; track boardItem;){
-    <img
-      class="image"
-      [src]="boardItem.image"
-      alt="board image"
-      (click)="onCardSelected(boardItem)"
-    />
+    <div class="card" (click)="onCardSelected(boardItem)">
+      <img class="image" [src]="boardItem.image" alt="board image" />
+    </div>
     }
   </div>
 </ng-template>
