@@ -123,10 +123,58 @@ mat-grid-tile {
   margin: 5px;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
-  border: none; /* Remove black border */
 }
 
 .image:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 80%;
+    padding: 15px;
+    box-shadow: none; /* Optional: Reduce or remove shadow on mobile */
+    border-radius: 8px;
+  }
+
+  .button-container {
+    width: 80%;
+    max-width: 80%;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
+
+  .dialog-container {
+    box-shadow: none; /* Optional: Reduce or remove shadow on mobile */
+    border-radius: 8px;
+  }
+
+  .card {
+    box-shadow: none; /* Optional: Reduce or remove shadow on mobile */
+  }
+
+  .image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .button {
+    font-size: 3vw; /* Adjust button font size for smaller screens */
+    padding: 3vw;
+  }
 }
