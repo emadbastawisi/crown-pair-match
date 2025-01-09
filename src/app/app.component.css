@@ -114,7 +114,6 @@ mat-grid-tile {
   width: 75px;
   height: 75px;
   margin: 5px;
-  border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
