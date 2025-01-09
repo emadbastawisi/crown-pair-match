@@ -13,14 +13,24 @@
   </mat-grid-list>
 </div>
 <div class="button-container">
+  <button
+    class="button"
+    [ngClass]="{ selected: selectedMode == '1' }"
+    mat-raised-button
+    (click)="onSelectNoramlMode()"
+  >
+    Normal Mode
+  </button>
+  <button
+    class="button"
+    [ngClass]="{ selected: selectedMode == '2' }"
+    mat-raised-button
+    (click)="onSelectFruitMode()"
+  >
+    Fruit Mode
+  </button>
   <button class="button reset" mat-flat-button (click)="onResetBoard()">
     Reset Board
-  </button>
-  <button class="button save" mat-flat-button (click)="onSaveBoard()">
-    Save Board
-  </button>
-  <button class="button load" mat-flat-button (click)="onLoadBoard()">
-    Load Board
   </button>
 </div>
 

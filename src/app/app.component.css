@@ -76,6 +76,7 @@ mat-grid-tile {
 
 /* General Button Styling */
 .button {
+  background-color: white; /* Blue */
   padding: 1.75vw; /* Smaller padding for smaller buttons */
   border-radius: 8px;
   text-transform: uppercase;
@@ -94,21 +95,13 @@ mat-grid-tile {
   background-color: #a71d2a;
 }
 
-/* Save Button - Green */
-.button.save {
-  background-color: #28a745; /* Green */
-}
-
-.button.save:hover {
-  background-color: #1c7430;
-}
-
 /* Load Button - Blue */
-.button.load {
+.button.selected {
   background-color: #007bff; /* Blue */
+  color: white;
 }
 
-.button.load:hover {
+.button.selected:hover {
   background-color: #0056b3;
 }
 
