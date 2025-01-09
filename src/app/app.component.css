@@ -111,8 +111,8 @@ mat-grid-tile {
 }
 
 .image {
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   margin: 5px;
   transition: transform 0.3s, box-shadow 0.3s;
 }

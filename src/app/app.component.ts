@@ -67,6 +67,7 @@ export class AppComponent {
     { name: 'fruit2', image: 'fruit2.png' },
     { name: 'fruit3', image: 'fruit3.png' },
     { name: 'fruit4', image: 'fruit4.png' },
+    { name: 'fruit5', image: 'fruit5.png' },
   ];
   boardItems2: itemType[] = [
     { name: 'default2', image: 'default2.png' },
@@ -87,6 +88,7 @@ export class AppComponent {
     { name: 'fruit2', image: 'fruit2.png' },
     { name: 'fruit3', image: 'fruit3.png' },
     { name: 'fruit4', image: 'fruit4.png' },
+    { name: 'fruit5', image: 'fruit5.png' },
   ];
   boardList: boardItem[] = [];
   boardList1: boardItem[] = [];
