@@ -168,14 +168,16 @@ export class AppComponent {
     }
   }
   onLoadFromLocalStorage() {
-    if (this.selectedMode == '1') {
-      this.boardList1 = JSON.parse(localStorage.getItem('boardList1') || '');
+    if (this.selectedMode === '1') {
+      const storedBoardList1 = localStorage.getItem('boardList1');
+      this.boardList1 = storedBoardList1 ? JSON.parse(storedBoardList1) : []; // Use an empty array as default
       this.boardList = this.boardList1;
-      this.boardItems = this.boardItems1;
+      this.boardItems = this.boardItems1 || []; // Ensure boardItems1 has a default value
     } else {
-      this.boardList2 = JSON.parse(localStorage.getItem('boardList2') || '');
+      const storedBoardList2 = localStorage.getItem('boardList2');
+      this.boardList2 = storedBoardList2 ? JSON.parse(storedBoardList2) : []; // Use an empty array as default
       this.boardList = this.boardList2;
-      this.boardItems = this.boardItems2;
+      this.boardItems = this.boardItems2 || []; // Ensure boardItems2 has a default value
     }
   }
 }
